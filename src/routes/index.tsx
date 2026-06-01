@@ -22,23 +22,12 @@ function Home() {
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
 
-      {/* Hero with looping background video (falls back to farm image) */}
+      {/* Hero */}
       <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster={farmLandscape}
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          {/* Replace /hero.mp4 with your uploaded video file */}
-          <source src="/hero.mp4" type="video/mp4" />
-        </video>
         <img
           src={farmLandscape}
           alt="A flourishing farmhouse garden at sunset"
-          className="absolute inset-0 h-full w-full object-cover -z-10"
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
 
