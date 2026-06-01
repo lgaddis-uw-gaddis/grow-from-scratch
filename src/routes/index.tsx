@@ -79,6 +79,36 @@ function Home() {
         </div>
       </section>
 
+      {/* Bare soil to harvest — looping video */}
+      <section className="px-6 pb-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-10">
+            <p className="text-primary uppercase tracking-[0.25em] text-xs mb-3">Watch it happen</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-tight">
+              From bare soil to a full harvest.
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              A season, condensed — the quiet miracle that unfolds when you give the land what it needs.
+            </p>
+          </div>
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border bg-card">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="w-full h-auto block"
+            >
+              <source src="/transformation.mp4" type="video/mp4" />
+            </video>
+            <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl" />
+          </div>
+        </div>
+      </section>
+
+
+
       {/* Three pillars */}
       <section className="pb-24 px-6">
         <div className="mx-auto max-w-6xl grid gap-8 md:grid-cols-3">
