@@ -22,23 +22,12 @@ function Home() {
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
 
-      {/* Hero with looping background video (falls back to farm image) */}
+      {/* Hero */}
       <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster={farmLandscape}
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          {/* Replace /hero.mp4 with your uploaded video file */}
-          <source src="/hero.mp4" type="video/mp4" />
-        </video>
         <img
           src={farmLandscape}
           alt="A flourishing farmhouse garden at sunset"
-          className="absolute inset-0 h-full w-full object-cover -z-10"
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
 
@@ -89,6 +78,36 @@ function Home() {
           </p>
         </div>
       </section>
+
+      {/* Bare soil to harvest — looping video */}
+      <section className="px-6 pb-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-10">
+            <p className="text-primary uppercase tracking-[0.25em] text-xs mb-3">Watch it happen</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-tight">
+              From bare soil to a full harvest.
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              A season, condensed — the quiet miracle that unfolds when you give the land what it needs.
+            </p>
+          </div>
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border bg-card">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="w-full h-auto block"
+            >
+              <source src="/transformation.mp4" type="video/mp4" />
+            </video>
+            <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl" />
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Three pillars */}
       <section className="pb-24 px-6">
